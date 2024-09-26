@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `displacementrequests`
 --
 
+
 CREATE TABLE `displacementrequests` (
   `RequestID` int(11) NOT NULL,
   `UserID` int(11) DEFAULT NULL,
@@ -247,3 +248,11 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+CREATE TABLE Locations (
+    locationId INT PRIMARY KEY AUTO_INCREMENT,
+    locationName VARCHAR(100) NOT NULL,
+    locationPriceLimit DECIMAL(10, 2) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
