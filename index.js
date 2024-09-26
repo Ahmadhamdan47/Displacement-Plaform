@@ -4,9 +4,14 @@ const db = require('./models'); // Sequelize models, automatically loaded from m
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+import displacementRequestRoutes from './routes/DisplacementRequestRoutes';
+
 
 // Middleware
 app.use(bodyParser.json()); // Parses incoming JSON requests
+
+//api
+app.use('/api/displacementrequests', displacementRequestRoutes);
 
 // Simple route for health check
 app.get('/', (req, res) => {
